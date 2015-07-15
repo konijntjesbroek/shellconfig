@@ -27,7 +27,8 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-PS1='-=[35m\u[0m@[35m\h[0m:[35m\w[33m$(__git_ps1 "|%s")[0m=-\n'
+PS1='-=[35m\u[0m@[35m\h[0m=-\n \\-[35m\w[33m$(__git_ps1 "|%s")[0m\n'
 EDITOR=vim
+GIT_PS1_SHOWDIRTYSTATE=true
 
-export PS1 EDITOR PATH
+export PS1 EDITOR PATH GIT_PS1_SHOWDIRTYSTATE

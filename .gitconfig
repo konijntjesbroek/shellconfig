@@ -10,6 +10,7 @@
 	dfl = diff --cached HEAD^
 	cma = !git add -A && git commit -m
 	cmd = commit --amend -m
+	pop = push -u origin
 [merge]
 	tool = vimdiff
 [push]
