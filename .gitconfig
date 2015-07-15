@@ -13,6 +13,7 @@
 	pop = push -u origin
 	ckm = checkout master
 	ck- = checkout -
+	fett = clone --bare
 [merge]
 	tool = vimdiff
 [push]
