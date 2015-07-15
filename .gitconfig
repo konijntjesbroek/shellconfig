@@ -11,6 +11,8 @@
 	cma = !git add -A && git commit -m
 	cmd = commit --amend -m
 	pop = push -u origin
+	ckm = checkout master
+	ck- = checkout -
 [merge]
 	tool = vimdiff
 [push]
