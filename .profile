@@ -21,10 +21,11 @@ do
  . $fName
 done
 
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
+if [ -d $HOME/bin ]; then
+  PATH="$HOME/bin:$PATH"
+fi
+if [ -d $HOME/local/bin ]; then
+  PATH="$HOME/local/bin:$PATH"
 fi
 
 PS1='[35m-- \u[33m|\h[35m\n \\_ \w[33m$(__git_ps1 "|%s")[0m\n'
