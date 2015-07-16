@@ -1,6 +1,6 @@
 [user]
-	name = koni
-	email = koni@here.org
+	name = 
+	email = 
 [alias]
 	tree = log --graph --decorate --pretty=oneline --abbrev-commit
 	cm = commit -m
