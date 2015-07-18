@@ -7,12 +7,17 @@
 	st = status
 	br = branch
 	ck = checkout
-	dfl = diff --cached HEAD^
+	
+	ck- = checkout -
+	ckm = checkout master
 	cma = !git add -A && git commit -m
 	cmd = commit --amend -m
+	dfl = diff --cached HEAD^
+	gcu = config --global user.name
+	gce = config --global user.email
 	pop = push -u origin
-	ckm = checkout master
-	ck- = checkout -
+	rao = remote add origin
+
 	fett = clone --bare
 [merge]
 	tool = vimdiff
