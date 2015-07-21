@@ -1,5 +1,4 @@
 set bs=2
-set ts=4
+set ts=2
 set ai
-set wrap
 syntax on
