@@ -11,12 +11,14 @@ HISTFILESIZE=2000
 # Terminal configuration
 shopt -s checkwinsize
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
 # color
 test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+
 #completion
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
@@ -25,11 +27,20 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
 #  Set up git 
 for fName in $HOME/.profile_scripts/*
 do
  . $fName
 done
+
+# PATH
+if [ -d $HOME/bin ]; then
+  PATH="$HOME/bin:$PATH"
+fi
+if [ -d $HOME/local/bin ]; then
+  PATH="$HOME/local/bin:$PATH"
+fi
 
 PS1='[35m-- \u[33m|\h[35m\n \\_ \w[33m$(__git_ps1 "|%s")[0m\n'
 EDITOR=vim
