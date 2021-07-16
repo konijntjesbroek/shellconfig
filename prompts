@@ -1,0 +1,48 @@
+#!/usr/bin/bash
+
+# Prompts
+#=== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ----
+#	created by: Arlo Gittings
+#	created on: 2021-07-15
+#	last modified: 2021-07-15
+#=== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- 
+# using colors
+#=== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- 
+#		sc = separator color
+#		uc = uname color
+#		hc = host color
+#		wc = loo, erm working directory color
+#=== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- 
+#	ANSI 16-color:
+#	
+#	fg = the escape sequence to set mode
+#	     [
+#	     ANSI 16-color not needed;
+#	     256-color fg: 38;5;
+#	     true-color fg: 38;2;
+#	bg = the escape sequence to set mode
+#	     ANSI 16-color not needed
+#	     256-color fg: 48;5;
+#	     true-color fg: 48;2;
+#=== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- 
+
+es='['
+fg_seq='38;2;'
+bg_seq='48;2;'
+nc="${es}00m"
+
+if [ $UID -eq 0 ];then	
+	sc="${es}${fg_seq}225;145;0;${bg_seq}0;0;0m"
+	uc="${es}${fg_seq}225;145;0;${bg_seq}145;0;0m"
+	hc="${es}${fg_seq}225;145;0;${bg_seq}145;0;0m"
+	wc="${es}${fg_seq}225;0;0;${bg_seq}0;0;0m"
+else
+	sc="${es}${fg_seq}185;185;55;${bg_seq}0;0;0m"
+	uc="${es}${fg_seq}225;145;0;${bg_seq}0;0;0m"
+	hc="${sc}"
+	wc="${uc}"
+fi
+
+PS1='${sc}-- ${uc}\u${hc}@\H\n${sc} \\_${wc}\w${nc}\n\$ '
+
+export PS1

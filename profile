@@ -1,10 +1,10 @@
 #!/usr/bin/bash
 
+# ~/.profile: executed by bash for login shells.
 #=== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- 
-# 	~/.profile: executed by bash for login shells.
-# 	created by: Arlo Gittings
-#	created on: 2021-04-27
-# 	last modified: 2021-07-14
+#   created by: Arlo Gittings
+#   created on: 2021-04-27
+#   last modified: 2021-07-14
 #=== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- 
 
 # environment variables

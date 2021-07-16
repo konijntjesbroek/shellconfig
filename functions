@@ -1,0 +1,23 @@
+#!/usr/bin/bash
+
+#   bash functions
+#=== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ----
+#   created by: Arlo Gittings
+#   created on
+#   last modified: 2021-07-14
+#   descriptions:
+#       Stuff that I find useful in the shell, are a bit more complex than
+#       an alias, but not quite needing it's own script, yet. Some should 
+#       probably be a script, but they still fit in here.
+#=== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ----
+
+function bup(){
+	# backup before modding
+	
+	if [ -e $1 ]; then
+		cp  $1 $1.`dtstamp`
+	else
+		echo "${1} does not exist"
+	fi
+}
+

@@ -1,0 +1,28 @@
+#!/usr/bin/bash
+
+# bash aliases
+#=== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- 
+#   created by: Arlo Gittings
+#   created on: sometime in June 2021 I split them out
+#   last modified: 2021-07-15
+#   description:
+#       various shortcuts for bash
+#=== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- 
+
+# fix vim
+alias vim='nvim'
+
+# colorfy apps
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# ls shortcuts
+alias ll='ls -alF'
+alias la='ls -A'
+
+# make timestamps
+alias dstamp='date +%Y-%m-%d'
+alias tstamp='date +%H%M'
+alias dtstamp='date +%Y-%m-%d.%H%M'
