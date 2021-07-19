@@ -1,6 +1,6 @@
 2021-07-15 1750 Removed stale configurations, populated with current template
-		   1813 Minor formatting fixes
-		   1838 Initializing the plan file
+           1813 Minor formatting fixes
+           1838 Initializing the plan file
            2052 Copied in functions and aliases 
                 Removed the hidden for profile
                 Cleaned up change.log
