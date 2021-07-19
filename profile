@@ -4,28 +4,33 @@
 #=== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- 
 #   created by: Arlo Gittings
 #   created on: 2021-04-27
-#   last modified: 2021-07-14
+#   last modified: 2021-07-18
 #=== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- 
 
 # environment variables
-CONFIG="${HOME}/.config/bash"
+CONF="${HOME}/.config/bash"
 DOCS="${HOME}/docs"
+HISTFILESIZE=2000
+HISTSIZE=1000
 PATH="${PATH}:${HOME}/bin"
-export PATH DOCS CONFIG
+export CONF DOCS HISTFILESIZE HISTSIZE PATH
 
 # shell options
 shopt -s histappend
-HISTSIZE=1000
-HISTFILESIZE=2000
 shopt -s checkwinsize
+
+# handling text stuff
+EDITOR="/usr/bin/nvim"
+PAGER="/usr/bin/less"
 eval "$(lesspipe.sh)"
+export EDITOR PAGER
 
 # configure prompts
-. ${CONFIG}/prompts
+. ${CONF}/prompts
 
 # load the secret magics
-. ${CONFIG}/keys
+. ${CONF}/keys
 
 # source psuedo-commands
-. ${CONFIG}/aliases
-. ${CONFIG}/functions
+. ${CONF}/aliases
+. ${CONF}/functions

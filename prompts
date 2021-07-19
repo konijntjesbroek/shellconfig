@@ -44,5 +44,5 @@ else
 fi
 
 PS1='${sc}-- ${uc}\u${hc}@\H\n${sc} \\_${wc}\w${nc}\n\$ '
-
-export PS1
+PS2='${uc}--${sc}>${nc} '
+export PS1 PS2
