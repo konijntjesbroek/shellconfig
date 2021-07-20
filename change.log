@@ -10,3 +10,4 @@
            2250 Added keys, aliases, functions to plan.md
            2305 Filled out README.md
 2021-07-19 1810 Moved aliases, functions, prompts to a separate directory
+           1902 Added git add commit push function

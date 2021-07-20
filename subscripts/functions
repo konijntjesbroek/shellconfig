@@ -3,7 +3,7 @@
 #   bash functions
 #=== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ---- ==== ----
 #   created by: Arlo Gittings
-#   created on
+#   created on: 2021-06-28
 #   last modified: 2021-07-14
 #   descriptions:
 #       Stuff that I find useful in the shell, are a bit more complex than
@@ -13,7 +13,6 @@
 
 function bup(){
 	# backup before modding
-	
 	if [ -e $1 ]; then
 		cp  $1 $1.`dtstamp`
 	else
@@ -21,3 +20,24 @@ function bup(){
 	fi
 }
 
+function gitacp(){
+    # git: add, commit and push
+    #== --- === --- === --- === --- === --- === --- === --- === --- === --- ===
+    #   add everything in the current tree to the commit, print the status and
+    #   validate if the user wants to commit and push. 
+    #== --- === --- === --- === --- === --- === --- === --- === --- === --- ===
+    #   usage:
+    #       gitacp "commit message"
+    #== --- === --- === --- === --- === --- === --- === --- === --- === --- ===
+
+    git add *
+    git status
+    echo "Shall we dance? (y/N)"
+    read pushing 
+    if [[ $pushing == "y"  ||  $pushing == "Y" ]] ; then
+        git commit -m '${*}'
+        git push origin master
+    else
+        echo "Aborting. . ."
+    fi
+}
