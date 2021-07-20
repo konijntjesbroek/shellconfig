@@ -32,6 +32,7 @@ function gitacp(){
 
     git add *
     git status
+
     echo "Shall we dance? (y/N)"
     read pushing 
     if [[ $pushing == "y"  ||  $pushing == "Y" ]] ; then
