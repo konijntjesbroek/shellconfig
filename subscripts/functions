@@ -35,7 +35,7 @@ function gitacp(){
     echo "Shall we dance? (y/N)"
     read pushing 
     if [[ $pushing == "y"  ||  $pushing == "Y" ]] ; then
-        git commit -m '${*}'
+        git commit -m "${*}"
         git push origin master
     else
         echo "Aborting. . ."
