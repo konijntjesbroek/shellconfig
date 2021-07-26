@@ -13,3 +13,4 @@
            1902 Added git add commit push function
            1909 Fixing a bug caused by "" vs ''
            2112 Fixed plan.md
+2021-07-26 1551 Git command had been removed, re-add and re-push
