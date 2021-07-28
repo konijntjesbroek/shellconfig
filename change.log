@@ -14,3 +14,4 @@
            1909 Fixing a bug caused by "" vs ''
            2112 Fixed plan.md
 2021-07-26 1551 Git command had been removed, re-add and re-push
+2021-07-28 1745 Modifying to use current branch and remote.
