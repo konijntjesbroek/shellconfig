@@ -15,3 +15,5 @@
            2112 Fixed plan.md
 2021-07-26 1551 Git command had been removed, re-add and re-push
 2021-07-28 1745 Modifying to use current branch and remote.
+           1835 Unsetting func vars to avoid cross contaminating the shell
+           1843 Added quotes to $* chack to correct a bug for multi-word commits
