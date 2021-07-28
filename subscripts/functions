@@ -21,14 +21,26 @@ function bup(){
 }
 
 function gitacp(){
+#== --- === --- === --- === --- === --- === --- === --- === --- === --- === --- 
+#   add, validate status, commit and push a git repo in one go
+#   
+#   usage:
+#       gitacp <"Commit reasoning goes here">
+#== --- === --- === --- === --- === --- === --- === --- === --- === --- === --- 
+    gitacp_opt=''  
+    IFS='/' read -r -a gitacp_r_b <<< `git status | grep 'Your branch' | cut -d\' -f2`
+    if [ $* ]; then
+        gitacp_opt="-m \"$*\""
+    fi
+
     git add *
     git status
-	
+
     echo "Shall we dance? (y/N)"
-    read cont
-    if [[ ${cont} == "y" || ${cont} == "Y" ]]; then
-        git commit -m "$*"
-        git push origin master
+    read gitacp_cont
+    if [[ ${gitacp_cont} == "y" || ${gitacp_cont} == "Y" ]]; then
+        git commit ${gitacp_opt}
+        git push ${gitacp_r_b[0]} ${gitacp_r_b[1]}
     else 
         echo 'Aborting. . .'
     fi
