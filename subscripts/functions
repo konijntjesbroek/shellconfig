@@ -27,7 +27,6 @@ function gitacp(){
 #   usage:
 #       gitacp <"Commit reasoning goes here">
 #== --- === --- === --- === --- === --- === --- === --- === --- === --- === --- 
-    gitacp_opt=''  
     IFS='/' read -r -a gitacp_r_b <<< `git status | grep 'Your branch' | cut -d\' -f2`
 
     git add *
@@ -42,5 +41,5 @@ function gitacp(){
         echo 'Aborting. . .'
     fi
 
-    unset gitacp_opt gitacp_r_b gitacp_cont
+    unset gitacp_r_b gitacp_cont
 }
